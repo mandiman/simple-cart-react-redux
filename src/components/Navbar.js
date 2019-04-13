@@ -13,7 +13,7 @@ import NotFound from './NotFound'
                         <div>
                             <ul className="nav__list">
                                 <li><Link to="/">Shop</Link></li>
-                                <li><Link to="/cart">My cart <span id="total__sum">{this.props.items}$</span></Link></li>
+                                <li><Link to="/cart">My cart <span id="total__sum">{this.props.total}$</span></Link></li>
                             </ul>
                         </div>
                         <Switch>
@@ -28,7 +28,7 @@ import NotFound from './NotFound'
 }
 const mapStateToProps = (state) => {
     return{
-        items: state.total
+        total: state.total
     }
 }
 
